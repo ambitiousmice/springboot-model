@@ -1,0 +1,59 @@
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+    port: 8082
+    servlet:
+        context-path: /
+
+# oracle
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:oracle:thin:@25.30.9.122:1521:mega
+        username: megaccb
+        password: megaccb
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    resources:
+            static-locations: classpath:/static/,classpath:/views/
+    data:
+        mongodb:
+          host: 120.79.13.6
+          port: 27017
+          username: test
+          password: test
+          database: test
+
+# Mybatis配置
+mybatis:
+    mapperLocations: classpath:mapper/**/*.xml
+
+## Tomcat
+#server:
+#    tomcat:
+#        max-threads: 10
+#        min-spare-threads: 10
+#    port: 80
+#
+## mysql
+#spring:
+#    datasource:
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driverClassName: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://localhost:3306/springboot_modle?useUnicode=true&characterEncoding=UTF-8
+#        username: root
+#        password: root
+#    jackson:
+#        time-zone: GMT+8
+#        date-format: yyyy-MM-dd HH:mm:ss
+#    resources:
+#            static-locations: classpath:/static/,classpath:/views/
+#
+## Mybatis配置
+#mybatis:
+#    mapperLocations: classpath:mapper/**/*.xml
+#
